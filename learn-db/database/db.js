@@ -14,7 +14,7 @@ const db = new Database(process.env.DB_FILE);
  * This is responsible for creating the tables and columns we need
  * It should be safe to run every time
  */
-const schemaPath = join("database", "schema.sql");
+const schemaPath = join("learn-db","database", "schema.sql");
 const schema = readFileSync(schemaPath, "utf-8");
 db.exec(schema);
 
